@@ -1,7 +1,8 @@
-import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger } from '../ui'
+import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger, CustomerProof } from '../ui'
 import SelfServiceDev from '../platform/SelfServiceDev'
 import SelfHostedAI from '../selfhosted/SelfHostedAI'
-import { ledger } from '../../data/claims'
+import AgentGrounding from '../viz/AgentGrounding'
+import { ledger, customers } from '../../data/claims'
 
 export default function AI() {
   return (
@@ -11,6 +12,8 @@ export default function AI() {
         title="AI-ready data"
         intro="AI is only as trustworthy as the context you give it. The platform gives builders dbt Wizard and gives agents governed context through an MCP server — here's that experience, and what standing it up yourself would take in dbt Core."
       />
+
+      <AgentGrounding />
 
       <PlatformSelfHostedToggle
         platform={<SelfServiceDev />}
@@ -27,6 +30,10 @@ export default function AI() {
         Let AI build with your data — and answer questions about it — grounded in governed, trusted context
         rather than guesswork.
       </TheJob>
+
+      <div className="mb-2 sm:max-w-sm">
+        <CustomerProof item={customers.sweetgreenInsight} />
+      </div>
 
       <OwnershipLedger items={ledger.ai} title="What you'd build yourself" />
     </div>

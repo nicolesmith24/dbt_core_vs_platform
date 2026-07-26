@@ -6,6 +6,7 @@ import SettingUpTests from '../platform/SettingUpTests'
 import DbtBuildSimulator from '../platform/DbtBuildSimulator'
 import StateAwareOrchestration from '../platform/StateAwareOrchestration'
 import SelfHostedOrchestration from '../selfhosted/SelfHostedOrchestration'
+import OrchestrationStack from '../viz/OrchestrationStack'
 import { ledger, customers } from '../../data/claims'
 
 const orchPhases = [
@@ -138,7 +139,7 @@ export default function Orchestration() {
 
       <PlatformSelfHostedToggle
         platform={<PlatformOrchestration />}
-        selfhosted={<SelfHostedOrchestration />}
+        selfhosted={<><OrchestrationStack /><SelfHostedOrchestration /></>}
         note="Switch to self-hosted to see everything you set up to run this yourself."
       />
 
@@ -154,8 +155,8 @@ export default function Orchestration() {
 
       <div className="grid sm:grid-cols-3 gap-4 mb-2">
         <CustomerProof item={customers.enpalCost} />
-        <CustomerProof item={customers.enpalRefresh} />
-        <CustomerProof item={customers.sunrunTickets} />
+        <CustomerProof item={customers.eqtCompute} />
+        <CustomerProof item={customers.obieCompute} />
       </div>
 
       <OwnershipLedger items={ledger.orchestration} />

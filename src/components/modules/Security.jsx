@@ -1,6 +1,6 @@
-import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger, CoreStrengthCallout, Icon } from '../ui'
+import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger, CoreStrengthCallout, CustomerProof, Icon } from '../ui'
 import SelfHostedSecurity from '../selfhosted/SelfHostedSecurity'
-import { ledger } from '../../data/claims'
+import { ledger, customers } from '../../data/claims'
 
 const cardCls = 'bg-white border border-gray-200/60 rounded-2xl p-6 shadow-sm'
 
@@ -82,6 +82,10 @@ export default function Security() {
         Give the right people the right access, satisfy security and audit requirements, and keep the whole stack
         patched — as the team grows and compliance expectations rise.
       </TheJob>
+
+      <div className="mb-2 sm:max-w-sm">
+        <CustomerProof item={customers.siemensGoverned} />
+      </div>
 
       <OwnershipLedger items={ledger.security} title="What you secure yourself" />
 

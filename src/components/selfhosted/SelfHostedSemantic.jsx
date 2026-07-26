@@ -1,5 +1,6 @@
 import SelfHostedWalkthrough from './SelfHostedWalkthrough'
 import { CodeBlock } from '../ui'
+import SemanticService from '../viz/SemanticService'
 
 const sections = [
   {
@@ -63,21 +64,7 @@ $ `}<span className="tok-c"># prints to your terminal. No BI tool, app, or agent
     label: 'How you serve it',
     title: 'To serve metrics yourself, you rebuild and run an entire product',
     body: 'This is easy to underestimate. Giving your tools a trusted metrics endpoint self-hosted is not a config change — it is standing up and operating a service, indefinitely, that duplicates what the dbt Semantic Layer is.',
-    code: (
-      <div className="rounded-xl border border-orange-200 bg-orange-50/40 p-4 mt-5">
-        <div className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">
-          What "serving metrics yourself" actually means — build and run:
-        </div>
-        <ul className="space-y-1.5 text-sm text-gray-700">
-          <li>• MetricFlow running as a long-lived, highly-available service — not a CLI</li>
-          <li>• A query API (JDBC + GraphQL) for tools to call, with auth and rate limiting</li>
-          <li>• A maintained connector for every BI tool — Tableau, Looker, Power BI, Excel</li>
-          <li>• Caching, concurrency, and scaling to survive real dashboard traffic</li>
-          <li>• Version-locking the service to your dbt project on every single deploy</li>
-        </ul>
-        <p className="text-[11px] text-gray-400 mt-3">In other words: rebuild, host, secure, and operate the dbt Semantic Layer as its own internal product.</p>
-      </div>
-    ),
+    code: <SemanticService />,
     platform: 'A managed Semantic Layer API, native BI connectors, and governance ship out of the box.',
     catch: 'This is months of platform engineering to stand up — and an ongoing service to run — not a feature you configure.',
   },
