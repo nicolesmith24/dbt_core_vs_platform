@@ -1,6 +1,7 @@
 import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger } from '../ui'
 import SelfServiceDev from '../platform/SelfServiceDev'
 import SelfHostedAI from '../selfhosted/SelfHostedAI'
+import AgentGrounding from '../viz/AgentGrounding'
 import { ledger } from '../../data/claims'
 
 export default function AI() {
@@ -11,6 +12,8 @@ export default function AI() {
         title="AI-ready data"
         intro="AI is only as trustworthy as the context you give it. The platform gives builders dbt Wizard and gives agents governed context through an MCP server — here's that experience, and what standing it up yourself would take in dbt Core."
       />
+
+      <AgentGrounding />
 
       <PlatformSelfHostedToggle
         platform={<SelfServiceDev />}

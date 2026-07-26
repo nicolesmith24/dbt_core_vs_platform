@@ -6,6 +6,7 @@ import SettingUpTests from '../platform/SettingUpTests'
 import DbtBuildSimulator from '../platform/DbtBuildSimulator'
 import StateAwareOrchestration from '../platform/StateAwareOrchestration'
 import SelfHostedOrchestration from '../selfhosted/SelfHostedOrchestration'
+import OrchestrationStack from '../viz/OrchestrationStack'
 import { ledger, customers } from '../../data/claims'
 
 const orchPhases = [
@@ -138,7 +139,7 @@ export default function Orchestration() {
 
       <PlatformSelfHostedToggle
         platform={<PlatformOrchestration />}
-        selfhosted={<SelfHostedOrchestration />}
+        selfhosted={<><OrchestrationStack /><SelfHostedOrchestration /></>}
         note="Switch to self-hosted to see everything you set up to run this yourself."
       />
 
