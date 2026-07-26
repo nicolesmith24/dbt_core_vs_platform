@@ -21,7 +21,7 @@ const groups = [
     name: 'Trusted AI & analytics',
     rows: [
       { f: 'Centralized, served business metrics (Semantic Layer)', self: 'diy' },
-      { f: 'Metadata / Discovery API for AI & integrations', self: 'no' },
+      { f: 'Hosted APIs for tools & agents (Discovery, Semantic Layer, Administrative)', self: 'no' },
       { f: 'Column-level lineage & impact analysis', self: 'no' },
     ],
   },
