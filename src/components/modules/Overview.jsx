@@ -1,6 +1,8 @@
 import { CustomerProof } from '../ui'
 import { customers } from '../../data/claims'
 import ControlPlane from '../viz/ControlPlane'
+import MaturityJourney from '../viz/MaturityJourney'
+import FeatureMatrix from '../viz/FeatureMatrix'
 
 export default function Overview() {
   return (
@@ -24,6 +26,11 @@ export default function Overview() {
         real headcount to build and operate it, and when it breaks at 2am, no vendor SLA behind the fix.
       </p>
 
+      {/* Maturity journey */}
+      <div className="mt-10">
+        <MaturityJourney />
+      </div>
+
       {/* Customer outcomes */}
       <div className="mt-10">
         <div className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
@@ -34,6 +41,11 @@ export default function Overview() {
           <CustomerProof item={customers.sunrunDeploy} />
           <CustomerProof item={customers.axsMaintenance} />
         </div>
+      </div>
+
+      {/* Feature comparison */}
+      <div className="mt-10">
+        <FeatureMatrix />
       </div>
     </div>
   )

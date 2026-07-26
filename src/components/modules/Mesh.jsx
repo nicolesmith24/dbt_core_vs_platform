@@ -1,6 +1,7 @@
 import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger, CustomerProof } from '../ui'
 import DbtMesh from '../platform/DbtMesh'
 import SelfHostedMesh from '../selfhosted/SelfHostedMesh'
+import AnswerCompare from '../viz/AnswerCompare'
 import { ledger, customers } from '../../data/claims'
 
 export default function Mesh() {
@@ -27,6 +28,33 @@ export default function Mesh() {
         Let many teams build on a shared foundation — finding, referencing, and safely versioning each other's
         models — instead of copying code or fighting one giant monolith.
       </TheJob>
+
+      <div className="mb-8">
+        <AnswerCompare
+          eyebrow="A cross-team question you have to answer before shipping"
+          question="“What breaks downstream if stg_salesforce changes?”"
+          self={{
+            time: '1–2 hours', trust: 'stale between deploys', label: 'You have to',
+            items: [
+              'Parse manifest.json and stand up a graph traversal',
+              'Cross-reference semantic model + metric YAML by hand',
+              'Re-run it on every deploy to stay current',
+              'Build an API or dashboard to surface the result',
+              'Hope nothing crosses a project boundary you can’t see',
+            ],
+          }}
+          platform={{
+            time: 'real-time', trust: 'live graph', label: 'The platform returns',
+            items: [
+              'Every affected model and metric, across projects',
+              'Column-level blast radius before the change ships',
+              'Environment-aware (prod vs. staging)',
+              'Queryable mid-run, via the Discovery API',
+            ],
+          }}
+          footer="At one project this is annoying; across many teams it's the question that decides whether a change is safe — and self-hosted, there's no reliable way to answer it."
+        />
+      </div>
 
       <div className="grid sm:grid-cols-3 gap-4 mb-2">
         <CustomerProof item={customers.axsTroubleshoot} />

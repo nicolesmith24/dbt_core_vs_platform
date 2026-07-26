@@ -1,7 +1,7 @@
-import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger } from '../ui'
+import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger, CustomerProof } from '../ui'
 import PlatformSemanticLayer from '../platform/SemanticLayer'
 import SelfHostedSemantic from '../selfhosted/SelfHostedSemantic'
-import { ledger } from '../../data/claims'
+import { ledger, customers } from '../../data/claims'
 
 export default function SemanticLayer() {
   return (
@@ -27,6 +27,11 @@ export default function SemanticLayer() {
         Give every tool, app, and AI one trusted definition of each metric — so revenue means the same thing in
         finance's dashboard and marketing's report.
       </TheJob>
+
+      <div className="grid sm:grid-cols-2 gap-4 mb-2">
+        <CustomerProof item={customers.biltMetric} />
+        <CustomerProof item={customers.sweetgreenTruth} />
+      </div>
 
       <OwnershipLedger items={ledger.semantic} title="What you're left to reconcile" />
     </div>

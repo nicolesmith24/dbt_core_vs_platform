@@ -1,8 +1,8 @@
-import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger } from '../ui'
+import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger, CustomerProof } from '../ui'
 import SelfServiceDev from '../platform/SelfServiceDev'
 import SelfHostedAI from '../selfhosted/SelfHostedAI'
 import AgentGrounding from '../viz/AgentGrounding'
-import { ledger } from '../../data/claims'
+import { ledger, customers } from '../../data/claims'
 
 export default function AI() {
   return (
@@ -30,6 +30,10 @@ export default function AI() {
         Let AI build with your data — and answer questions about it — grounded in governed, trusted context
         rather than guesswork.
       </TheJob>
+
+      <div className="mb-2 sm:max-w-sm">
+        <CustomerProof item={customers.sweetgreenInsight} />
+      </div>
 
       <OwnershipLedger items={ledger.ai} title="What you'd build yourself" />
     </div>

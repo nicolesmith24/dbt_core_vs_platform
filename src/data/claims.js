@@ -31,6 +31,9 @@ export const sources = {
   dish: { title: 'DISH Digital Solutions customer story', url: 'https://www.getdbt.com/case-studies/dish-digital-solutions' },
   enpal: { title: 'Enpal customer story', url: 'https://www.getdbt.com/case-studies/enpal' },
   rebtel: { title: 'Rebtel customer story', url: 'https://www.getdbt.com/case-studies/rebtel' },
+  siemens: { title: 'Siemens customer story', url: 'https://www.getdbt.com/case-studies/siemens' },
+  sweetgreen: { title: 'Sweetgreen customer story', url: 'https://www.getdbt.com/case-studies/sweetgreen' },
+  bilt: { title: 'Bilt Rewards customer story', url: 'https://www.getdbt.com/case-studies/bilt-rewards' },
 }
 
 // Product-mechanism proof points — rendered by <ProofPoint> with a "dbt-published" label.
@@ -58,6 +61,10 @@ export const customers = {
   enpalCost: { name: 'Enpal', stat: '70%', label: 'lower monthly data costs', note: 'as part of a modern data stack migration onto the dbt platform', source: sources.enpal },
   enpalRefresh: { name: 'Enpal', stat: '36h → 1h', label: 'faster refresh on their heaviest pipelines', note: 'includes a warehouse migration', source: sources.enpal },
   rebtelMaintenance: { name: 'Rebtel', stat: '4 weeks/yr', label: 'of data-team maintenance time reclaimed', source: sources.rebtel },
+  biltMetric: { name: 'Bilt', stat: '80%', label: 'lower query costs — one metric defined once and used everywhere', source: sources.bilt },
+  sweetgreenTruth: { name: 'Sweetgreen', stat: '1', label: 'single source of truth for every KPI, across dashboards and AI', source: sources.sweetgreen },
+  sweetgreenInsight: { name: 'Sweetgreen', stat: '2 wks → 30 min', label: 'to answer a business question, with AI + the Semantic Layer', source: sources.sweetgreen },
+  siemensGoverned: { name: 'Siemens', stat: '70,000', label: 'employees working from governed, centralized data', source: sources.siemens },
 }
 
 // Ownership ledger — the operational components you run yourself when self-hosting.
