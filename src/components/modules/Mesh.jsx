@@ -1,0 +1,40 @@
+import { ModuleHeader, TheJob, PlatformSelfHostedToggle, CoreLens, OwnershipLedger, CustomerProof } from '../ui'
+import DbtMesh from '../platform/DbtMesh'
+import SelfHostedMesh from '../selfhosted/SelfHostedMesh'
+import { ledger, customers } from '../../data/claims'
+
+export default function Mesh() {
+  return (
+    <div>
+      <ModuleHeader
+        eyebrow="Walkthrough · 03"
+        title="Scaling with dbt Mesh"
+        intro="Growing from one project to many: discovering existing models, referencing them across teams with governed dependencies, and protecting downstream consumers from breaking changes — on the dbt platform, then the same jobs self-hosted."
+      />
+
+      <PlatformSelfHostedToggle
+        platform={<DbtMesh />}
+        selfhosted={<SelfHostedMesh />}
+        note="Same jobs — switch to see what sharing across teams takes when you self-host."
+      />
+
+      <CoreLens
+        title="Where self-hosting hits a wall"
+        intro="This is the bluntest gap in the guide: dbt Core has no real answer for sharing models across teams. There's no governed cross-project reference — only a monolith repo or brittle package imports — and governance falls back on convention that stops holding at scale. It's one of the clearest reasons organizations move to the dbt platform once they start building data products or scaling across teams."
+      />
+
+      <TheJob>
+        Let many teams build on a shared foundation — finding, referencing, and safely versioning each other's
+        models — instead of copying code or fighting one giant monolith.
+      </TheJob>
+
+      <div className="grid sm:grid-cols-3 gap-4 mb-2">
+        <CustomerProof item={customers.axsTroubleshoot} />
+        <CustomerProof item={customers.whoopDocs} />
+        <CustomerProof item={customers.dishTroubleshoot} />
+      </div>
+
+      <OwnershipLedger items={ledger.mesh} title="What you coordinate yourself" />
+    </div>
+  )
+}

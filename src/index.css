@@ -78,4 +78,58 @@
   .tok-str { color: #92c430; }
   .tok-c  { color: #99a1af; font-style: italic; }
   .tok-num { color: #f0883e; }
+
+  /* ── Terminal log panel (simulators) ── */
+  .terminal {
+    @apply rounded-xl overflow-hidden border border-gray-800 text-[12.5px] leading-relaxed;
+    background: #0f1720;
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .terminal-head {
+    @apply flex items-center gap-2 px-3 py-2 border-b border-white/10 text-[11px] text-gray-500;
+    background: rgba(255,255,255,0.03);
+  }
+  .term-run  { color: #7dd3fc; }
+  .term-ok   { color: #86efac; }
+  .term-warn { color: #fcd34d; }
+  .term-fail { color: #fca5a5; }
+  .term-skip { color: #9ca3af; }
+  .term-dim  { color: #6b7280; }
+
+  /* ── Proof-point chip ── */
+  .proof {
+    @apply rounded-xl border border-orange-200 bg-orange-50/60 p-4;
+  }
+  .proof-stat {
+    color: var(--dbt-orange);
+    @apply text-2xl font-bold tracking-tight leading-none;
+  }
+  .proof-src {
+    @apply inline-flex items-center gap-1 text-[11px] text-gray-400 hover:text-orange-600 transition-colors;
+  }
+  .badge-published {
+    @apply inline-flex items-center gap-1 rounded-full bg-white border border-orange-200 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide;
+    color: var(--dbt-orange);
+  }
+
+  /* ── Ownership ledger ── */
+  .ledger-row {
+    @apply grid gap-2 items-center py-2 border-b border-gray-100 last:border-0;
+    grid-template-columns: 1fr auto auto;
+  }
+  .ledger-tag {
+    @apply inline-flex items-center justify-center gap-1 rounded-md px-2 py-0.5 text-[11px] font-medium min-w-[92px];
+  }
+  .ledger-you  { @apply bg-gray-900 text-white; }
+  .ledger-mgmt { @apply bg-orange-50 text-orange-600 border border-orange-200; }
+
+  .seg-toggle {
+    @apply inline-flex rounded-lg bg-gray-100 p-1 gap-1;
+  }
+  .seg-btn {
+    @apply px-3.5 py-1.5 rounded-md text-sm font-medium text-gray-500 transition-all duration-150 cursor-pointer;
+  }
+  .seg-btn-active {
+    @apply bg-white text-gray-900 shadow-sm;
+  }
 }
