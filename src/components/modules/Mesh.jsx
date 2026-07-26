@@ -57,9 +57,9 @@ export default function Mesh() {
       </div>
 
       <div className="grid sm:grid-cols-3 gap-4 mb-2">
-        <CustomerProof item={customers.axsTroubleshoot} />
+        <CustomerProof item={customers.rocheUnified} />
+        <CustomerProof item={customers.mcdonaldsUnify} />
         <CustomerProof item={customers.whoopDocs} />
-        <CustomerProof item={customers.dishTroubleshoot} />
       </div>
 
       <OwnershipLedger items={ledger.mesh} title="What you coordinate yourself" />

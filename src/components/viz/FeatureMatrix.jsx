@@ -8,13 +8,11 @@ const groups = [
     rows: [
       { f: 'Build SQL transformations', self: 'yes' },
       { f: 'Validate code before it ships (CI)', self: 'diy' },
-      { f: 'Efficient testing & column-aware CI', self: 'no' },
     ],
   },
   {
     name: 'Reduce cost & overhead',
     rows: [
-      { f: 'Fusion engine — fast runs, instant SQL validation, column-aware refactors', self: 'no' },
       { f: 'dbt State — rebuild only what changed', self: 'no' },
       { f: 'Cloud-native & fully managed with 99.9% uptime SLA', self: 'no' },
     ],

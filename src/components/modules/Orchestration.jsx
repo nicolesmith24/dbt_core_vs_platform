@@ -155,8 +155,8 @@ export default function Orchestration() {
 
       <div className="grid sm:grid-cols-3 gap-4 mb-2">
         <CustomerProof item={customers.enpalCost} />
-        <CustomerProof item={customers.enpalRefresh} />
-        <CustomerProof item={customers.sunrunTickets} />
+        <CustomerProof item={customers.eqtCompute} />
+        <CustomerProof item={customers.obieCompute} />
       </div>
 
       <OwnershipLedger items={ledger.orchestration} />

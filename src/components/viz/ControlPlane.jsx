@@ -63,14 +63,16 @@ export default function ControlPlane() {
           )}
         </AnimatePresence>
 
-        {/* Layer 2 — Personas */}
-        <div className="rounded-2xl bg-indigo-600 p-3">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-            {personas.map(p => (
-              <div key={p} className="rounded-lg bg-white px-3 py-2 text-center text-[12px] font-medium text-indigo-700">{p}</div>
-            ))}
+        {/* Layer 2 — Personas (platform only: everyone gets a safe on-ramp) */}
+        {platform && (
+          <div className="rounded-2xl bg-indigo-600 p-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              {personas.map(p => (
+                <div key={p} className="rounded-lg bg-white px-3 py-2 text-center text-[12px] font-medium text-indigo-700">{p}</div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Layer 3 — Pipeline */}
         <div className="rounded-2xl bg-gray-100 p-4">
@@ -105,13 +107,13 @@ export default function ControlPlane() {
           {platform ? (
             <motion.p key="cap-plat" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}
               className="text-sm text-gray-600">
-              The dbt platform provides the whole control plane — governance, orchestration, semantics, and AI context — as one managed product on top of the engine.
+              The dbt platform provides the whole control plane as one managed product — so engineers, analysts, and AI agents all work from the same governed foundation.
             </motion.p>
           ) : (
             <motion.p key="cap-self" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}
               className="text-sm text-gray-700">
-              dbt Core gives you the transformation box. Everything in the top layer —{' '}
-              <span className="font-semibold text-gray-900">{totalOwnedComponents}+ operational components</span> — is yours to build, run, and keep alive.
+              dbt Core gives you the transformation box. The control plane above —{' '}
+              <span className="font-semibold text-gray-900">{totalOwnedComponents}+ operational components</span> — is yours to build and run, and in practice only technical CLI users can safely contribute.
             </motion.p>
           )}
         </AnimatePresence>

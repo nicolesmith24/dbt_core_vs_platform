@@ -34,6 +34,11 @@ export const sources = {
   siemens: { title: 'Siemens customer story', url: 'https://www.getdbt.com/case-studies/siemens' },
   sweetgreen: { title: 'Sweetgreen customer story', url: 'https://www.getdbt.com/case-studies/sweetgreen' },
   bilt: { title: 'Bilt Rewards customer story', url: 'https://www.getdbt.com/case-studies/bilt-rewards' },
+  eqt: { title: 'EQT Group customer story', url: 'https://www.youtube.com/watch?v=ReUUtDFu2Y8' },
+  roche: { title: 'Roche unifies data and enables AI', url: 'https://www.getdbt.com/blog/roche-unifies-data-enables-ai' },
+  docusign: { title: "Docusign's path to 40% cost savings and 60% productivity", url: 'https://www.getdbt.com/blog/modernizing-data-at-scale-docusign-s-path-to-40-cost-savings-and-60-increased-productivity' },
+  mcdonalds: { title: "McDonald's Nordics customer story", url: 'https://www.getdbt.com/case-studies/mcdonalds-nordics' },
+  obie: { title: 'How Obie cut compute costs by 30%', url: 'https://www.getdbt.com/blog/how-obie-cut-compute-costs-by-30-percent' },
 }
 
 // Product-mechanism proof points — rendered by <ProofPoint> with a "dbt-published" label.
@@ -65,6 +70,11 @@ export const customers = {
   sweetgreenTruth: { name: 'Sweetgreen', stat: '1', label: 'single source of truth for every KPI, across dashboards and AI', source: sources.sweetgreen },
   sweetgreenInsight: { name: 'Sweetgreen', stat: '2 wks → 30 min', label: 'to answer a business question, with AI + the Semantic Layer', source: sources.sweetgreen },
   siemensGoverned: { name: 'Siemens', stat: '70,000', label: 'employees working from governed, centralized data', source: sources.siemens },
+  eqtCompute: { name: 'EQT Group', stat: '45%', label: 'lower compute cost, with 60% faster runtime on Fusion', source: sources.eqt },
+  obieCompute: { name: 'Obie', stat: '30%', label: 'lower compute via dbt State, plus 2–5 engineering hours reclaimed weekly', source: sources.obie },
+  rocheUnified: { name: 'Roche', stat: '80+', label: 'countries unified on one governed platform (70% cost saved)', source: sources.roche },
+  mcdonaldsUnify: { name: "McDonald's Nordics", stat: '4 → 1', label: 'data platforms unified, with 50% fewer engineering tickets', source: sources.mcdonalds },
+  docusignImpact: { name: 'Docusign', stat: '$3M', label: 'in lost revenue recovered, plus 60% higher productivity', source: sources.docusign },
 }
 
 // Ownership ledger — the operational components you run yourself when self-hosting.
