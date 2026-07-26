@@ -39,8 +39,8 @@ $ `}<span className="tok-c"># to feed Alation/Atlan: hand-build an ingest from m
   {
     key: 'governance',
     label: 'Governance at scale',
-    title: 'Governance you cannot enforce is governance in name only',
-    body: 'Contracts, ownership, and breaking-change protection all rely on convention and code review. With a handful of models that is workable; across a mesh of teams shipping data products it is not. Nothing stops a breaking change to a shared model, guarantees a public interface stays stable, or enforces who owns what.',
+    title: 'Governance that stops at the project boundary',
+    body: 'dbt Core genuinely has model contracts, versions, groups, and access — and inside a single project they work: a contract fails the build if a model breaks its schema. What Core cannot do is span projects. Nothing signals that breaking change to a separate team’s project, coordinates ownership across teams, or guarantees a public interface stays stable for consumers you cannot see.',
     code: (
       <CodeBlock title="a contract exists in config — but only inside one project">
 {`models:
@@ -51,8 +51,8 @@ $ `}<span className="tok-c"># to feed Alation/Atlan: hand-build an ingest from m
    `}<span className="tok-c"># nothing protects the downstream teams depending on it</span>
       </CodeBlock>
     ),
-    platform: 'Contracts, versions, groups, and access are enforced across projects at the platform level.',
-    catch: 'By the time you are serving data products to other teams, "govern by review" has already failed.',
+    platform: 'The same contracts, versions, groups, and access are governed and enforced across projects.',
+    catch: 'By the time you are serving data products to other teams, in-project governance no longer reaches far enough.',
   },
 ]
 

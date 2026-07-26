@@ -49,6 +49,7 @@ export default function AnswerCompare({ eyebrow, question, self, platform, foote
       </div>
 
       {footer && <p className="text-xs text-gray-400 mt-4">{footer}</p>}
+      <p className="text-[11px] text-gray-300 mt-1.5">Times shown are illustrative of the manual steps involved, not a benchmark.</p>
     </div>
   )
 }

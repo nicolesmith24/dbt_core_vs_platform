@@ -20,8 +20,8 @@ const groups = [
   {
     name: 'Trusted AI & analytics',
     rows: [
-      { f: 'Centralized business metrics (Semantic Layer)', self: 'diy' },
-      { f: 'Data context for AI via MCP server & Metadata API', self: 'diy' },
+      { f: 'Centralized, served business metrics (Semantic Layer)', self: 'diy' },
+      { f: 'Metadata / Discovery API for AI & integrations', self: 'no' },
       { f: 'Column-level lineage & impact analysis', self: 'no' },
     ],
   },

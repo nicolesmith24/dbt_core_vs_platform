@@ -26,7 +26,7 @@ export function MeshSharingDiagram() {
             </span>
             <span className="text-[11px] rounded bg-gray-100 px-2 py-1.5 text-gray-700">Their entire project</span>
           </div>
-          <p className="text-[11px] text-gray-400 mt-2.5">A fragile git link — no versioning, no access control, breaks when they change.</p>
+          <p className="text-[11px] text-gray-400 mt-2.5">You pin a commit, but inherit their whole project — no governed interface, no access boundary, and you break when they change.</p>
         </div>
       </div>
     </div>
